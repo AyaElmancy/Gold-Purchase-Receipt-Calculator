@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Gold Receipt</title>
+</head>
+<body>
+    <script>
+        // Prompt user for name, grams, and price
+        var name = prompt("What is your name?");
+        var gram = prompt("What is the number of grams?");
+        var price = prompt("What is the price per gram?");
+
+        // Convert gram and price to numbers (float)
+        gram = parseFloat(gram);
+        price = parseFloat(price);
+
+        // Function to calculate the receipt
+        function gold(gram, price) {
+            var receipt = gram * price;  // Calculate the total price
+            document.write(`Welcome ${name}, your receipt is ${receipt.toFixed(2)} <br>`); // Output result with 2 decimals
+        }
+
+        // Call the function with user input values
+        gold(gram, price);
+    </script>
+</body>
+</html>
